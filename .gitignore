@@ -14,3 +14,7 @@ wp-content/cache/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local config
+wp-config.php
+.htaccess
