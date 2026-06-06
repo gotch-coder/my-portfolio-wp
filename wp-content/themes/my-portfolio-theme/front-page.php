@@ -12,44 +12,31 @@ $message = $_POST['message'] ?? '';
 ?>
 
 
-<!-- <?php include 'header.php'; ?> -->
 <?php get_header(); ?>
 
 <div id="container">
   <?php echo 'TEST'; ?>
 
 
-  <!-- ナビゲーションメニュー -->
-  <!-- <nav class="nav-menu" id="navMenu">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#service">Service</a></li>
-      <li><a href="#works">Works</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav> -->
 
   <!-- オーバーレイ（メニュー外クリックで閉じる用） -->
   <div class="overlay" id="overlay"></div>
 
   <!-- 新しいローディング -->
-  <div id="loading"></div>
+  <!-- <div id="loading"></div> -->
 
   <!-- fv画面 -->
   <section id="main">
     <div class="fv-overlay"></div>
     <div id="top-slide">
       <div class="slider">
-        <div><img src="images/rd8_500_r1.jpg" alt="topslide_1"></div>
-        <div><img src="images/rd8_500_r2.jpg" alt="topslide_2"></div>
-        <div><img src="images/rd8_500_r3.jpg" alt="topslide_3"></div>
+        <div><img src="<?php echo get_template_directory_uri(); ?>/images/rd8_500_r1.jpg" alt="topslide_1"></div>
+        <div><img src="<?php echo get_template_directory_uri(); ?>/images/rd8_500_r2.jpg" alt="topslide_2"></div>
+        <div><img src="<?php echo get_template_directory_uri(); ?>/images/rd8_500_r3.jpg" alt="topslide_3"></div>
       </div>
     </div>
 
-    <!-- 文字 -->
-    <!-- <div class="fv__content">
-          <h1 class="loading__text">Hello, World!</h1>
-        </div> -->
+
 
     <div class="scroll-indicator">
       <span>SCROLL</span>
@@ -89,8 +76,10 @@ $message = $_POST['message'] ?? '';
       <div class="about__flex">
 
         <div class="about__img">
-          <img src="images/240316180731150.jpg" class="sp_none" alt="about_img">
-          <img src="images/240316180731150.jpg" class="pc_none" alt="about_img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/240316180731150.jpg" class="sp_none"
+            alt="about_img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/240316180731150.jpg" class="pc_none"
+            alt="about_img">
         </div>
 
         <div class="about__textarea">
@@ -113,15 +102,15 @@ $message = $_POST['message'] ?? '';
       </div>
       <div class="service__list">
         <div class="service__content">
-          <img src="images/HTML_CSS.svg" alt="html&css">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/HTML_CSS.svg" alt="html&css">
           <p>HTML&CSS</p>
         </div>
         <div class="service__content">
-          <img src="images/JavaScript.svg" alt="javascript">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/JavaScript.svg" alt="javascript">
           <p>Javascript</p>
         </div>
         <div class="service__content">
-          <img src="images/Git.svg" alt="wordpress">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/Git.svg" alt="wordpress">
           <p>Git</p>
         </div>
       </div>
@@ -142,14 +131,14 @@ $message = $_POST['message'] ?? '';
         <div class="work-card">
 
           <div class="work-card__img">
-            <img src="images/hotel_01.jpg" alt="〇〇旅館">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/hotel_01.jpg" alt="html&css">
           </div>
 
           <div class="work-card__body">
             <h3>〇〇旅館 様</h3>
             <p>HTML / CSS / JQuery</p>
 
-            <a href="detail.php" class="btn">
+            <a href="<?php echo home_url('/detail/'); ?>" class="btn">
               View More
             </a>
           </div>
@@ -159,14 +148,14 @@ $message = $_POST['message'] ?? '';
         <div class="work-card">
 
           <div class="work-card__img">
-            <img src="images/TKL_R6_8741_TP_V4.jpg" alt="〇〇農園">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/TKL_R6_8741_TP_V4.jpg" alt="〇〇農園">
           </div>
 
           <div class="work-card__body">
             <h3>〇〇農園 様</h3>
             <p>HTML / CSS / JQuery</p>
 
-            <a href="detail.php" class="btn">
+            <a href="<?php echo home_url('/detail/'); ?>" class="btn">
               View More
             </a>
           </div>
@@ -176,14 +165,14 @@ $message = $_POST['message'] ?? '';
         <div class="work-card">
 
           <div class="work-card__img">
-            <img src="images/office_01.jpg" alt="〇〇株式会社">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/office_01.jpg" alt="〇〇株式会社">
           </div>
 
           <div class="work-card__body">
             <h3>〇〇株式会社 様</h3>
             <p>HTML / CSS / JQuery</p>
 
-            <a href="detail.php" class="btn">
+            <a href="<?php echo home_url('/detail/'); ?>" class="btn">
               View More
             </a>
           </div>
@@ -194,14 +183,14 @@ $message = $_POST['message'] ?? '';
         <div class="work-card">
 
           <div class="work-card__img">
-            <img src="images/carfactory_01.jpg" alt="〇〇自動車工場">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/carfactory_01.jpg" alt="〇〇自動車工場">
           </div>
 
           <div class="work-card__body">
             <h3>〇〇自動車工場 様</h3>
             <p>HTML / CSS / JQuery</p>
 
-            <a href="detail.php" class="btn">
+            <a href="<?php echo home_url('/detail/'); ?>" class="btn">
               View More
             </a>
           </div>
@@ -264,6 +253,4 @@ $message = $_POST['message'] ?? '';
 </div>
 
 
-
-<!-- <?php include 'footer.php'; ?> -->
 <?php get_footer(); ?>

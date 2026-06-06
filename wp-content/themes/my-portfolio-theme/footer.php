@@ -22,13 +22,13 @@
       </div>
       <div class="sns__area">
         <a href="https://www.twitter.com">
-          <img src="images/twitter.png" alt="twitter"></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="twitter"></a>
         <a href="https://www.youtube.com">
-          <img src="images/youtube.png" alt="youtube"></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/youtube.png" alt="youtube"></a>
         <a href="https://www.instagram.com">
-          <img src="images/instagram.png" alt="instagram"></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.png" alt="instagram"></a>
         <a href="https://www.facebook.com">
-          <img src="images/facebook.png" alt="facebook"></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="facebook"></a>
 
       </div>
     </div>
@@ -39,12 +39,3 @@
 </body>
 
 </html>
-
-<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="js/main.js"></script>
-
-</body>
-
-</html> -->

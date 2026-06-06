@@ -78,32 +78,32 @@ $(function (){
       slidesToScroll: 1
 
     });
-    // ローディング
 
+    // ローディング
     $(window).on('load', function() {
 
-      setTimeout(function() {
+      // setTimeout(function() {
 
         // loadingを消す
         $('#loading').addClass('fadeout');
 
         // main visual表示
-        setTimeout(function(){
-          $('#main').addClass('show');
-        }, 500);
+        // setTimeout(function(){
+        //   $('#main').addClass('show');
+        // }, 500);
 
         // hello, world!表示
-        setTimeout(function(){
-          $('h1').addClass('show');
-        }, 1300);
+        // setTimeout(function(){
+        //   $('h1').addClass('show');
+        // }, 1300);
 
 
         // スクロール解除
-        setTimeout(function() {
-          $('body').removeClass('loading');
-        }, 1000);
+        // setTimeout(function() {
+        //   $('body').removeClass('loading');
+        // }, 1000);
 
-      }, 2500);
+    //   }, 2500);
     });
 
     $('.loading__title span').each(function(index){

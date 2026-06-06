@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #000;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 1.8;
   padding-top: var(--header-height);
 }
@@ -30,7 +30,7 @@ a {
   transition: 0.3s;
 }
 
-a hover {
+a:hover {
   opacity: 0.7;
 }
 
@@ -281,7 +281,7 @@ SP
   }
 
 /* オーバーレイ（背景を暗くする）  */
-.overlay {
+/* .overlay {
   display: none;
   position: fixed;
   top: var(--header-height);
@@ -290,7 +290,7 @@ SP
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 98;
-}
+} */
 
 /* ==================================
 pc
@@ -335,7 +335,7 @@ sp
     right: 0;
   }
   /* 背景overlay  */
-  .overlay {
+  .overlay { 
     display: none;
     position: fixed;
     top: var(--header-height);
@@ -378,7 +378,7 @@ body.is-fixed{
 #loading {
   position: fixed;
   inset: 0;
-  background: #000;
+  /* background: #000; */
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -389,9 +389,18 @@ body.is-fixed{
               visibility 1s ease;
 }
 
+#loading {
+  display: none !important;
+}
+
+
+
 #loading.fadeout {
   opacity: 0;
   visibility: hidden;
+}
+#loading.fadeout {
+  display: none !important;
 }
 
 
@@ -411,6 +420,9 @@ body.is-fixed{
     /* font-size: 3rem; */
     top: 52%;
   }
+}
+.loading__title {
+  display:none !important;
 }
 
 /* 一文字ずつアニメーション */
@@ -474,7 +486,11 @@ body.is-fixed{
   }
 } */
 
-
+/* body.loading * {
+  outline: 3px solid red !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+} */
 
 
 
@@ -483,6 +499,10 @@ body.is-fixed{
 
 body.loading {
   overflow: hidden;
+}
+
+.body.loading #loading {
+  display: none !important;
 }
 
 @keyframes loadingFade {
@@ -524,7 +544,7 @@ body.loading {
   position: relative;
   overflow: hidden;
   /* 最初はmain visualを隠す */
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 1.5s ease;
 }
 
