@@ -1,30 +1,21 @@
-<!-- <!DOCTYPE html>
-<html lang="ja"> -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
 <head>
-  <!-- <meta charset="utf-8"> -->
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <title>hiroki | Web制作ポートフォリオ</title> -->
   <title><?php bloginfo('name'); ?></title>
   <meta name="description" content="hirokiのWeb制作ポートフォリオです。HTML・CSS・JavaScript・PHP・WordPressを使用したWebサイト制作を行っています。">
   <meta name="keywords" content="Web制作, ポートフォリオ, HTML, CSS, PHP">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-  <!-- <link rel="stylesheet" href="./css/style.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
   <meta name="robots" content="noindex">
-  <!-- <link rel="icon" href="images/PC_icon2.png" type="image/png"> -->
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/PC_icon2.png" type="image/png">
   <!-- OGP設定 -->
-  <!-- <html prefix="og: http://ogp.me/ns#"> -->
   <meta property="og:title" content="Hello My Portfolio">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.hiroki-web2024.com/images/240316180731150.JPG">
@@ -43,14 +34,14 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('loading'); ?>>
+<!-- <body <?php body_class('loading'); ?>> -->
 
-
+<body>
+  <?php echo 'HEADER TEST'; ?>
   <!-- ヘッダー -->
   <header class="header">
     <div class="inner">
       <div class="header__bg">
-        <!-- <a href="index.php" class="navi__btn title">My Portfolio</a> -->
         <a href="<?php echo home_url('/'); ?>" class="navi__btn title">My Portfolio</a>
 
         <div id="navi__content" class="nav-menu">
