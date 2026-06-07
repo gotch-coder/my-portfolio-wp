@@ -37,7 +37,6 @@
 <!-- <body <?php body_class('loading'); ?>> -->
 
 <body>
-  <?php echo 'HEADER TEST'; ?>
   <!-- ヘッダー -->
   <header class="header">
     <div class="inner">

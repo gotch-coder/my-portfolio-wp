@@ -15,15 +15,12 @@ $message = $_POST['message'] ?? '';
 <?php get_header(); ?>
 
 <div id="container">
-  <?php echo 'TEST'; ?>
-
-
 
   <!-- オーバーレイ（メニュー外クリックで閉じる用） -->
   <div class="overlay" id="overlay"></div>
 
   <!-- 新しいローディング -->
-  <!-- <div id="loading"></div> -->
+  <div id="loading"></div>
 
   <!-- fv画面 -->
   <section id="main">

@@ -1,6 +1,7 @@
 // ===== JavaScript（jQuery）の役割：動き・操作 =====
 
-$(function (){
+// $(function (){
+jQuery(function($){
 
   // 使う要素を変数にまとめる
   const $btn     = $('#hamburgerBtn');/* ハンバーガーメニュー */
@@ -58,16 +59,21 @@ $(function (){
     });
   };
 
+  
   // 初回読み込み時にも実行
-  $(window).on('load scroll', fadeInCheck);
-  fadeInCheck(); // 初回実行
+    $(window).on('load scroll', fadeInCheck);
+    fadeInCheck(); // 初回実行
 
 
   // トップスライド
     $('.slider').slick({
       autoplay: true,
       autoplaySpeed: 0,
+      // autoplaySpeed: 3000,
       speed: 4000,
+      // speed: 1000,
+      // fade: true,
+      // ↑追記
       cssEase: 'linear',
       arrows: false,
       dots: false,
@@ -76,34 +82,35 @@ $(function (){
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1
-
     });
 
     // ローディング
     $(window).on('load', function() {
 
-      // setTimeout(function() {
+      setTimeout(function() {
 
         // loadingを消す
         $('#loading').addClass('fadeout');
 
         // main visual表示
-        // setTimeout(function(){
-        //   $('#main').addClass('show');
-        // }, 500);
+        setTimeout(function(){
+          $('#main').addClass('show');
+        // $('.loading__title').addClass('show');
+        }, 500);
 
         // hello, world!表示
-        // setTimeout(function(){
+        setTimeout(function(){
+        $('.loading__title').addClass('show');
         //   $('h1').addClass('show');
-        // }, 1300);
+        }, 1300);
 
 
         // スクロール解除
-        // setTimeout(function() {
-        //   $('body').removeClass('loading');
-        // }, 1000);
+        setTimeout(function() {
+          $('body').removeClass('loading');
+        }, 1000);
 
-    //   }, 2500);
+      }, 2500);
     });
 
     $('.loading__title span').each(function(index){
