@@ -179,7 +179,7 @@ header
   padding: 8px;
   gap: 5px;
 }
-@media  screen and (max-width: 767px) {
+@media  screen and (max-width: 768px) {
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -226,7 +226,7 @@ header inner
 /* ===================================
 PC navigation
 ====================================  */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 
   /* メニュー全体 */
   .nav-menu {
@@ -280,23 +280,12 @@ SP
       }
   }
 
-/* オーバーレイ（背景を暗くする）  */
-/* .overlay {
-  display: none;
-  position: fixed;
-  top: var(--header-height);
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 98;
-} */
 
 /* ==================================
 pc
 ================================== */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /* .nav-menu, */
   .overlay {
     display: none !important;
@@ -389,11 +378,6 @@ body.is-fixed{
               visibility 1s ease;
 }
 
-#loading {
-  display: none !important;
-}
-
-
 
 #loading.fadeout {
   opacity: 0;
@@ -417,13 +401,10 @@ body.is-fixed{
 }
 @media screen and (max-width: 768px) {
   .loading__title {
-    /* font-size: 3rem; */
     top: 52%;
   }
 }
-.loading__title {
-  display:none !important;
-}
+
 
 /* 一文字ずつアニメーション */
 .loading__title span {
@@ -476,24 +457,6 @@ body.is-fixed{
 .loading__title span:nth-child(12) {
   animation-delay: 1.1s;
 } */
-
-
-/* アニメーション本体 */
-/* @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-
-/* body.loading * {
-  outline: 3px solid red !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-} */
-
-
-
 
 
 
@@ -575,32 +538,37 @@ body.loading {
 }
 
 /* 横スクロール */
-/* .slide-wrapper {
+.slide-wrapper {
   display: flex;
   height: 100%;
   transition: transform 1s ease;
-} */
-/* .slide-wrapper img {
+}
+.slide-wrapper img {
   width: 100%;
   height: 550px;
   object-fit: cover;
   flex-shrink: 0;
-} */
+}
 
 /* 無限ループスライダー */
-#top-slide,
-.slider,
-.slider div,
+ #top-slide {
+  height: 100vh;
+ }
+
+ .slider,
 .slick-list,
-.slick-track {
+.slick-track,
+.slick-slide {
   height: 100%;
 }
+
 .slider img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 
 
 
@@ -632,7 +600,7 @@ body.loading {
 .fv-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, .4);
+  /* background: rgba(0, 0, 0, .4); */
   z-index: 1;
 }
 
@@ -713,7 +681,7 @@ body.loading {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   /* スマホだけ改行 */
   .sp-only {
     display: block;
