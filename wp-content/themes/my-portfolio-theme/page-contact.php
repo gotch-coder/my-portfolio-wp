@@ -1,4 +1,5 @@
 <?php
+session_start();
 get_header();
 ?>
 
@@ -11,7 +12,16 @@ get_header();
     $_SESSION['token'] = $token;
     ?>
 
-  <form action="<?php echo get_template_directory_uri(); ?>/page-confirm.php" method="post">
+
+
+
+
+
+  <form action="<?php echo get_template_directory_uri(); ?>/confirm.php" method="post">
+    <!-- <form action="<?php echo home_url('/confirm/'); ?>" method="post"> -->
+
+
+    <input type="hidden" name="token" value="<?php echo htmlspecialchars($_SESSION['token'], ENT_QUOTES, 'UTF-8'); ?>">
 
     <p>
       <label>お名前</label><br>
@@ -30,7 +40,6 @@ get_header();
 
     <button type="submit">確認画面へ</button>
 
-    <input type="hidden" name="token" value="<?php echo htmlspecialchars($token, ENT_QUOTES, 'UTF-8'); ?>">
 
 
   </form>
