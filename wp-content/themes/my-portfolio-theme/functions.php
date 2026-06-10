@@ -55,11 +55,13 @@ function myportfolio_enqueue_assets() {
   add_action('wp_enqueue_scripts', 'myportfolio_enqueue_assets');
   
   add_action('init', function() {
-    if (!session_id()) {
-      session_start();
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
     }
+});
+  
 
-    if (!isset($_SESSION['token'])) {
-      $_SESSION['token'] = bin2hex(random_bytes(32));
-    }
-  });
+  //   if (!isset($_SESSION['token'])) {
+  //     $_SESSION['token'] = bin2hex(random_bytes(32));
+  //   }
+  // });
