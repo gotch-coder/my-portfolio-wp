@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 get_header();
 ?>
 
@@ -17,8 +17,8 @@ get_header();
 
 
 
-  <form action="<?php echo get_template_directory_uri(); ?>/confirm.php" method="post">
-    <!-- <form action="<?php echo home_url('/confirm/'); ?>" method="post"> -->
+
+  <form action="<?php echo home_url('/confirm/'); ?>" method="post">
 
 
     <input type="hidden" name="token" value="<?php echo htmlspecialchars($_SESSION['token'], ENT_QUOTES, 'UTF-8'); ?>">
