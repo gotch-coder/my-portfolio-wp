@@ -58,10 +58,10 @@ function myportfolio_enqueue_assets() {
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
+
+    if (!isset($_SESSION['token'])) {
+    $_SESSION['token'] = bin2hex(random_bytes(32));
+    }
+    
 });
   
-
-  //   if (!isset($_SESSION['token'])) {
-  //     $_SESSION['token'] = bin2hex(random_bytes(32));
-  //   }
-  // });

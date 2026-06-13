@@ -194,7 +194,7 @@
       </p>
 
       <div class="contact__form">
-        <form method="post" action="<?php echo get_template_directory_uri(); ?>/confirm.php">
+        <form method="post" action="<?php echo home_url('/confirm/'); ?>">
 
           <input type="hidden" name="token"
             value="<?php echo htmlspecialchars($_SESSION['token'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">

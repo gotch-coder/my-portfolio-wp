@@ -1,6 +1,6 @@
 <?php
 session_start();
-?>
+
 
 echo '<h1 style="color:red">SEND OK</h1>';
 

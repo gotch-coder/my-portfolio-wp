@@ -1,7 +1,8 @@
 <?php
-// session_start();
+// die('PAGE-CONFIRM.PHP LOADED');
+
 get_header();
-?>
+
 
 
 
@@ -90,7 +91,7 @@ $errors['email'] = '正しいメール形式で入力してください';
   </p>
 
   <!-- 戻る -->
-  <form action="contact.php" method="post">
+  <form action="<?php echo home_url('/contact/'); ?>" method="post">
 
     <input type="hidden" name="token" value="<?php echo htmlspecialchars($token, ENT_QUOTES, 'UTF-8'); ?>">
 
@@ -107,7 +108,8 @@ $errors['email'] = '正しいメール形式で入力してください';
 
   <!-- 送信 -->
 
-  <form action="send.php" method="post">
+
+  <form action="<?php echo get_template_directory_uri(); ?>/send.php" method="post">
 
     <input type="hidden" name="token" value="<?php echo htmlspecialchars($token, ENT_QUOTES, 'UTF-8'); ?>">
 
