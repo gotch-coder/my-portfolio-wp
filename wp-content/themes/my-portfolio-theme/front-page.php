@@ -1,16 +1,13 @@
 <?php
-// session_start();
-
-// CSRFトークン生成
+// トークン発行(毎回新規)
 $token = bin2hex(random_bytes(32));
 $_SESSION['token'] = $token;
 
-// フォームの値保持
-$name = $_POST['name'] ?? '';
+// 「戻る」で戻ってきた場合の入力値復元
+$name = $_POST['contact_name'] ?? '';
 $email = $_POST['email'] ?? '';
 $message = $_POST['message'] ?? '';
 ?>
-
 
 <?php get_header(); ?>
 
@@ -210,6 +207,8 @@ $message = $_POST['message'] ?? '';
 
       <div class="contact__form">
 
+
+
         <form action="<?php echo home_url('/confirm/'); ?>" method="post">
           <input type="hidden" name="token" value="<?php echo htmlspecialchars($token ?? '', ENT_QUOTES, 'UTF-8'); ?>">
 
@@ -217,7 +216,8 @@ $message = $_POST['message'] ?? '';
           <div class="form-group">
             <label for="name">お名前</label>
 
-            <input type="text" name="name" value="<?php echo htmlspecialchars($name ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+            <input type="text" name="contact_name"
+              value="<?php echo htmlspecialchars($name ?? '', ENT_QUOTES, 'UTF-8'); ?>">
 
           </div>
 
