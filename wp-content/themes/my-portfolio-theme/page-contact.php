@@ -1,21 +1,14 @@
 <?php
-// session_start();
+
+
+$token = bin2hex(random_bytes(32));
+$_SESSION['token'] = $token;
 get_header();
 ?>
 
 <main>
 
   <h1>Contact</h1>
-
-  <?php
-    $token = bin2hex(random_bytes(32));
-    $_SESSION['token'] = $token;
-    ?>
-
-
-
-
-
 
 
   <form action="<?php echo home_url('/confirm/'); ?>" method="post">
@@ -25,7 +18,7 @@ get_header();
 
     <p>
       <label>お名前</label><br>
-      <input type="text" name="name">
+      <input type="text" name="contact_name">
     </p>
 
     <p>

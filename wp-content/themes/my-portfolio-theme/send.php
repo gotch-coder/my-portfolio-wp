@@ -1,14 +1,45 @@
 <?php
+require_once($_SERVER['DOCUMENT_ROOT'] . '/portfolio-wp/wp-load.php');
+
+if (session_status() === PHP_SESSION_NONE) {
 session_start();
+}
 
+// POSTデータの取得
+$name = $_POST['contact_name'] ?? '';
+$email = $_POST['email'] ?? '';
+$message = $_POST['message'] ?? '';
+$token = $_POST['token'] ?? '';
 
-echo '<h1 style="color:red">SEND OK</h1>';
+// トークン検証
+if (!isset($_SESSION['token']) || $token !== $_SESSION['token']) {
+    die('不正なアクセスです。');
+}
 
-echo '
-<pre>';
-var_dump($_POST);
-echo '</pre>';
+// メール送信
+$to = get_option('admin_email');
+$subject = 'お問い合わせがありました';
+$body = "お名前: {$name}\nメールアドレス: {$email}\n\nお問い合わせ内容:\n{$message}";
+$headers = ['Content-Type: text/plain; charset=UTF-8'];
+
+$sent = wp_mail($to, $subject, $body, $headers);
+
+// 使用済みトークンを破棄(再送信防止)
+unset($_SESSION['token']);
+
+// デバッグ用(動作確認できたら消してOK)
+if (!$sent) {
+    echo '<p style="color:red">メール送信に失敗しました。</p>';
+} else {
+    echo '<p style="color:green">メール送信に成功しました。</p>';
+}
 ?>
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="ja">

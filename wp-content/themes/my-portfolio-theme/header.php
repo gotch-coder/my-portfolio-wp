@@ -26,15 +26,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@hiroki_ge8mt">
 
-  <!-- <body class="loading"> -->
-  <!-- ローディング動画 -->
-  <!-- <div id="loading">
-      <p class="loading__text">Loading</p>
-    </div> -->
   <?php wp_head(); ?>
 </head>
-
-<!-- <body <?php body_class('loading'); ?>> -->
 
 <body>
   <!-- ヘッダー -->

@@ -1280,6 +1280,57 @@ contactフォームコンテンツ
   cursor: pointer;
 }
 
+/* =========================
+   確認画面
+========================= */
+
+
+.confirm {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.confirm-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.confirm-table th,
+.confirm-table td {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+.confirm-table th {
+  width: 220px;
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+/* 確認画面のタイトル */
+.confirm-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* 確認画面のボタン */
+.confirm-btns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.confirm-btns form {
+  margin: 0;
+}
 
 
 /* ==========================
